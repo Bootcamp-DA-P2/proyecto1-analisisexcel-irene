@@ -98,7 +98,7 @@ Además, se implementaron **segmentadores (slicers)** que permiten filtrar todos
 
 ## 🖥️ Vista del Dashboard
 
-![Dashboard Excel](./dashboard.png)
+![Dashboard Excel](./dashboard.PNG)
 
 ---
 
