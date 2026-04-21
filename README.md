@@ -16,7 +16,8 @@ El objetivo es transformar datos brutos en información clara y accionable media
 
 ## 📊 Dataset Utilizado
 
-* **Dataset principal**: `kiva_loans.csv`
+* **Dataset principal**: `kiva_loans.csv`. 
+    (Utilizado: kiva_loans_42304_rows.csv)
 * **Fuente**: Kaggle
 * **Organización**: Kiva.org
 
@@ -24,30 +25,35 @@ Este dataset contiene información sobre préstamos concedidos a nivel global, i
 
 ---
 
-## 📌 Elección de KPIs del Dashboard
+## 📌 KPIs del Dashboard
 
-Para el diseño del dashboard se seleccionaron indicadores clave que permiten entender rápidamente el comportamiento de los préstamos:
+Para el diseño del dashboard se seleccionaron indicadores clave que permiten entender rápidamente el volumen y la distribución de los préstamos financiados:
 
-* 💰 **Total Loan Amount**: volumen total de préstamos concedidos
-* 💵 **Total Funded Amount**: cantidad total financiada
-* 🧑‍🤝‍🧑 **Total Partner ID**: número agregado de socios involucrados
-* ⏳ **Total Term in Months**: suma de los plazos de los préstamos
+* 💰 **Total Financed**: volumen total de préstamos financiados
+* 👩 **Total Female Financed**: cantidad total financiada a mujeres
+* 👥 **Total Group Financed**: cantidad total financiada a grupos
+* 👨 **Total Male Financed**: cantidad total financiada a hombres
 
-Estos KPIs permiten tener una visión general del impacto financiero y operativo del dataset.
+Estos KPIs ofrecen una visión rápida del impacto financiero segmentado por género y tipo de beneficiario.
 
 ---
 
 ## 📊 Visualizaciones del Dashboard
 
-El dashboard incluye diferentes tipos de gráficos para facilitar el análisis:
+El dashboard incluye los siguientes gráficos:
 
-* 📈 Distribución de préstamos por **sector**
-* 🌍 Análisis por **país**
-* 👥 Segmentación por **género**
-* ⏱️ Comparativa por **tipo de pago** (monthly, irregular, bullet)
-* 📅 Filtros interactivos por **año**
+* 🌍 **Country / Funded Amount**: gráfico de líneas con la evolución del importe financiado por país
+* 👥 **Gender / Funded Amount**: gráfico de barras horizontales con la distribución del importe financiado por género
+* 📅 **Year / Funded Amount**: gráfico de dona con la distribución del importe financiado por año
+* 🏭 **Activity (Sector) / Funded Amount**: gráfico de barras con el importe financiado por sector de actividad
 
-Además, se implementaron **segmentadores (slicers)** que permiten filtrar todos los gráficos de forma dinámica.
+Además, se implementaron **segmentadores (slicers)** que permiten filtrar todos los gráficos de forma dinámica por:
+
+* 🌍 País (`country`)
+* 👤 Género (`gender`)
+* 🔄 Tipo de pago (`repayment schedule`): monthly, irregular, bullet, weekly
+* 🏭 Sector (`sector`)
+* 📅 Año (`year`)
 
 ---
 
@@ -59,17 +65,18 @@ Además, se implementaron **segmentadores (slicers)** que permiten filtrar todos
 * Power Query (transformación de datos)
 
 ---
-
 ## 📦 Estructura del Proyecto
 
 ```
 📁 proyecto1-analisisexcel-irene/
 │
+├── 📄 .gitignore
 ├── 📄 README.md
-├── dashboard.png
+├── 📁 imagenes/dashboard.png
 ├── 📊 proyecto001.xlsx
 ├── 📁 data/
 │   └── kiva_loans.csv
+│   └── kiva_loans_42304_rows.csv
 ```
 
 ---
@@ -98,7 +105,7 @@ Además, se implementaron **segmentadores (slicers)** que permiten filtrar todos
 
 ## 🖥️ Vista del Dashboard
 
-![Dashboard Excel](./dashboard.PNG)
+![Dashboard Excel](./imagenes/dashboard.png)
 
 ---
 
@@ -106,7 +113,7 @@ Además, se implementaron **segmentadores (slicers)** que permiten filtrar todos
 
 1. Abrir el archivo `proyecto001.xlsx`
 2. Ir a la hoja **Dashboard**
-3. Utilizar los **segmentadores** para filtrar datos
+3. Utilizar los **segmentadores** para filtrar datos por país, género, tipo de pago, sector y año
 4. Analizar los cambios dinámicos en KPIs y gráficos
 
 ---
@@ -116,4 +123,5 @@ Además, se implementaron **segmentadores (slicers)** que permiten filtrar todos
 Este proyecto demuestra cómo Excel puede utilizarse como una herramienta completa de análisis de datos, permitiendo construir dashboards interactivos y visualmente atractivos sin necesidad de software adicional.
 
 ---
+
 
